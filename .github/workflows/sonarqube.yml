@@ -34,6 +34,6 @@ jobs:
           /opt/sonar-scanner/bin/sonar-scanner \
             -Dsonar.projectKey=test \
             -Dsonar.sources=. \
-            -Dsonar.host.url=http://${{ secrets.SONAR_HOST }} \
+            -Dsonar.host.url=https://c689-91-171-27-182.ngrok-free.app \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
