@@ -32,7 +32,8 @@ jobs:
       - name: Run SonarScanner
         run: |
           /opt/sonar-scanner/bin/sonar-scanner \
-            -Dsonar.projectKey=mon-projet \
+            -Dsonar.projectKey=test \
             -Dsonar.sources=. \
-            -Dsonar.host.url=http://192.168.56.130:9000 \
+            -Dsonar.host.url=http://${{ secrets.SONAR_HOST }} \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
